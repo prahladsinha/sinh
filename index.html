@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SINH EPK</title>
+<meta name="description" content="SINH: hip-hop classics reimagined with experimental bass. Electronic press kit, music, live shows and booking.">
+<meta property="og:title" content="SINH EPK">
+<meta property="og:description" content="Hip-hop classics reimagined with experimental bass. Tucson, AZ and Chicago, IL.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+/* VOICE occasion: a show flyer for promoters and labels, loud but composed
+   IDEA a club night poster: the logo as headliner, a lineup of who he's shared stages with
+   PICTURE the horned SINH logo huge on black, a red glow behind it
+   COLOUR SINH brand: black ground, red #F93434, off-white #FCFCFC, gray #727272
+   TYPE Anton display + Archivo text
+   LAYOUT logo across the first screen with tagline and booking buttons under it; stats strip; bio beside facts; lineup poster; media; links; booking */
+:root{color-scheme:dark;--bg:#000;--panel:#111;--line:#2a2a2a;--ink:#FCFCFC;--mute:#a8a8a8;--red:#F93434;--gray:#727272}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Archivo,system-ui,sans-serif;overflow-x:clip}
+a{color:inherit}
+img{max-width:100%;display:block}
+.band{padding-block:clamp(40px,6vw,88px);padding-left:max(5vw,16px);padding-right:max(5vw,16px)}
+.wrap{max-width:1240px;margin:0 auto}
+h1,h2,h3{font-family:Anton,Impact,sans-serif;font-weight:400;line-height:1.05;margin:0;text-wrap:balance}
+h2{font-size:clamp(36px,5vw,52px);margin-bottom:24px}
+p{margin:0 0 14px;max-width:66ch}
+.mute{color:var(--mute)}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+nav{position:sticky;top:0;z-index:5;background:rgba(0,0,0,.86);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px max(5vw,16px)}
+nav img{height:34px;width:auto}
+.links{display:flex;flex-wrap:wrap;gap:4px 22px;font-weight:500}
+.links a{text-decoration:none;color:var(--mute);padding:10px 0}
+.links a:hover,.links a:focus-visible{color:var(--ink)}
+.hero{position:relative;text-align:center;overflow:hidden;padding-top:clamp(36px,6vw,72px)}
+.hero::before{content:"";position:absolute;left:50%;top:42%;width:min(1100px,140vw);aspect-ratio:1;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(249,52,52,.28),rgba(249,52,52,.08) 55%,transparent 75%);pointer-events:none}
+.logo{position:relative;width:min(560px,82vw);margin:0 auto}
+.tag{position:relative;font-size:clamp(20px,2.4vw,26px);font-weight:700;margin:28px auto 6px;max-width:none}
+.where{position:relative;color:var(--mute);margin:0 auto 26px;max-width:none}
+.ctas{position:relative;display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid var(--red)}
+.btn.solid{background:var(--red)}
+.btn:hover,.btn:focus-visible{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.stats{margin-inline:auto;width:min(1240px,calc(100% - 2*max(5vw,16px)));display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-block:1px solid var(--line)}
+.stat{padding:22px 18px;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat b{display:block;font-family:Anton,sans-serif;font-weight:400;font-size:clamp(34px,4vw,48px);line-height:1;color:var(--red);white-space:nowrap}
+.stat span{display:block;margin-top:8px;color:var(--mute);font-size:15px;line-height:1.4}
+.bio{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:start}
+#bio p{font-size:17px}
+#bio em{color:var(--red);font-style:normal;font-weight:700}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:26px}
+.card+.card{margin-top:16px}
+.card h3{font-size:24px;margin-bottom:12px}
+.kv{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:10px 18px;margin:0}
+.kv dt{color:var(--mute)}
+.kv dd{margin:0;font-weight:500}
+.track{display:flex;gap:16px;align-items:center;text-decoration:none}
+.play{flex:none;width:56px;height:56px;border-radius:50%;background:var(--red);display:grid;place-items:center}
+.play svg{width:20px;height:20px;margin-left:3px}
+.track b{display:block;font-size:17px;color:var(--ink)}
+.track>span>span{display:block}
+.track span{color:var(--mute);font-size:14px}
+.track:hover b,.track:focus-visible b{color:var(--red)}
+.poster{background:var(--red);color:var(--bg)}
+.poster h2{color:var(--bg)}
+.bill{text-align:center}
+.bill .lab{max-width:none;font-weight:800;font-size:15px;margin:26px 0 6px;color:#000}
+.bill .lab:first-child{margin-top:0}
+.bill .names{font-family:Anton,sans-serif;font-size:clamp(34px,6vw,72px);line-height:1.02;text-transform:uppercase;text-wrap:balance}
+.bill .names.sm{font-size:clamp(26px,4vw,44px)}
+.bill .names i{font-style:normal;color:var(--ink)}
+.venues{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 10px;margin-top:10px}
+.venues span{border:2px solid #000;border-radius:999px;padding:6px 16px;font-weight:700}
+.media{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.media .feat{grid-column:1/-1}
+.media .feat video{aspect-ratio:16/9}
+.media .half{grid-column:span 1}
+.media2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin-top:12px}
+.media2 img,.media2 video{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:12px}
+.portrait{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:60% 30%;border-radius:16px}
+.biogrid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(24px,4vw,56px);align-items:start;margin-bottom:clamp(28px,4vw,48px)}
+.cards{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+.cards .card+.card{margin-top:0}
+.slot{aspect-ratio:4/5;border-radius:12px;background:var(--panel);border:1px dashed var(--line);display:grid;place-items:center;color:var(--gray);font-size:14px;text-align:center;padding:16px}
+.media img,.media video{width:100%;height:100%;object-fit:cover;border-radius:12px;aspect-ratio:4/5;display:block;background:#111}
+.dl{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.socials{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.socials a{display:flex;flex-direction:column;gap:4px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;text-decoration:none;min-height:44px}
+.socials small{color:var(--mute);font-size:14px}
+.socials strong{font-size:16px;overflow-wrap:anywhere}
+.socials a:hover,.socials a:focus-visible{border-color:var(--red)}
+.book{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px;align-items:center;border-top:1px solid var(--line)}
+.book h2{font-size:clamp(44px,7vw,88px);text-transform:uppercase;margin:0}
+.book h2 span{color:var(--red)}
+footer{padding:22px max(5vw,16px);color:var(--mute);font-size:14px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;border-top:1px solid var(--line)}
+@media(max-width:900px){.socials{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:760px){.bio,.book,.biogrid,.cards,.media2{grid-template-columns:minmax(0,1fr)}.portrait{max-height:520px}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}.media{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.links{display:none}.socials{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav aria-label="Main"><div class="in">
+  <a href="#top" aria-label="SINH home"><img src="media/sinh-logo.png" alt="SINH"></a>
+  <div class="links"><a href="#bio">Bio</a><a href="#music">Music</a><a href="#live">Live</a><a href="#links">Links</a><a href="#booking">Booking</a></div>
+</div></nav>
+
+<header class="band hero" id="top">
+  <img class="logo" src="media/sinh-logo.png" alt="SINH logo with devil horns and tail">
+  <p class="tag">Hip-hop classics reimagined with experimental bass.</p>
+  <p class="where">Tucson, AZ and Chicago, IL. Pronounced "sin," rhymes with "win."</p>
+  <div class="ctas">
+    <a class="btn solid" href="https://tally.so/r/7XLXYz">Book SINH</a>
+    <a class="btn" href="https://soundcloud.com/officiallysinh">Listen on SoundCloud</a>
+  </div>
+</header>
+
+<section class="wrap stats" aria-label="Highlights">
+  <div class="stat"><b>50K+</b><span>Monthly plays on SoundCloud</span></div>
+  <div class="stat"><b>100K+</b><span>Plays on his "Father Stretch My Hands Pt. 1" remix</span></div>
+  <div class="stat"><b>3</b><span>National support slots: Rae Sremmurd, Ship Wrek, Borgore</span></div>
+  <div class="stat"><b>AZ + CHI</b><span>Active in the Arizona and Chicago bass scenes</span></div>
+</section>
+
+<section class="band" id="bio">
+  <div class="wrap">
+    <div class="biogrid">
+      <img class="portrait" src="media/press-portrait.jpg" alt="SINH press portrait">
+      <div>
+        <h2>Biography</h2>
+        <p>When SINH moved to Arizona in 2023, he fell in love with the EDM scene instantly but missed the rap culture he grew up on. Taking inspiration from Tape B and Whethan, he blended years of beatmaking and hardstyle experience into a sonic world of his own: <em>SINH City</em>.</p>
+      <p>His first notable support slots came in 2025, opening for Rae Sremmurd and Ship Wrek, followed by Borgore in January 2026. The next month, he released his remix of Kanye West's "Father Stretch My Hands Pt. 1," now past 100K plays, and Papajay brought him on stage to debut it live.</p>
+      <p>SINH has kept that momentum going, sharpening his sound and releasing more remixes on SoundCloud, where he now pulls 50,000+ monthly plays. He has collaborated with Bonkers, Unnevn and Z3lla, received support from Adventure Club, Avello, M?stic and more, and performs across Arizona and Chicago.</p>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h3>Quick facts</h3>
+        <dl class="kv">
+          <dt>Genre</dt><dd>Experimental bass, dubstep, bass house</dd>
+          <dt>Sound</dt><dd>Hip-hop drums and classics, melodic bass, hardstyle roots</dd>
+          <dt>For fans of</dt><dd>Tape B, Whethan, Subtronics, Wooli</dd>
+          <dt>Based in</dt><dd>Tucson, AZ and Chicago, IL</dd>
+        </dl>
+      </div>
+      <div class="card" id="music">
+        <h3>Featured music</h3>
+        <a class="track" href="https://soundcloud.com/officiallysinh/father-stretch-my-hands-pt-1">
+          <span class="play" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M4 2 L17 10 L4 18 Z" fill="#000"/></svg></span>
+          <span><b>Kanye West: Father Stretch My Hands Pt. 1 (SINH Remix)</b><span>100K+ plays on SoundCloud</span></span>
+        </a>
+        <p class="mute" style="margin:18px 0 0">Debut project <strong style="color:var(--ink)">Sinh City Vol. 1</strong>, a 4-track remix album, out February 2026.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band poster" aria-labelledby="bill-h">
+  <div class="wrap bill">
+    <h2 id="bill-h" class="lab" style="font-family:Archivo,sans-serif;font-size:15px;font-weight:800;margin:0 0 6px">Supported</h2>
+    <div class="names">Rae Sremmurd <i>/</i> Borgore <i>/</i> Ship Wrek</div>
+    <p class="lab">Support from</p>
+    <div class="names sm">Adventure Club <i>/</i> Avello <i>/</i> M?stic</div>
+    <p class="lab">Collaborations</p>
+    <div class="names sm">Bonkers <i>/</i> Unnevn <i>/</i> Z3lla</div>
+    <p class="lab">Played at</p>
+    <div class="venues"><span>Fuku Sushi</span><span>Gentle Ben's</span><span>Lust DWTN</span><span>Playground Rooftop</span><span>Soundbar Chicago</span></div>
+  </div>
+</section>
+
+<section class="band" id="live">
+  <div class="wrap">
+    <h2>Live videos and photos</h2>
+    <div class="media" id="media">
+      <div class="feat"><video src="media/live-1.mp4" poster="media/poster-1.jpg" autoplay muted loop playsinline controls preload="metadata" aria-label="SINH live highlight reel"></video></div>
+      <img src="media/live-purple.jpg" alt="SINH on the decks under purple lights" loading="lazy">
+      <video src="media/live-2.mp4" poster="media/poster-2.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Crowd at a SINH set"></video>
+      <img src="media/live-stage.jpg" alt="SINH dancing on stage in front of the crowd" loading="lazy">
+    </div>
+    <div class="media2">
+      <img src="media/live-red.jpg" alt="SINH behind the decks with hands up in the crowd" loading="lazy">
+      <video src="media/live-3.mp4" poster="media/poster-3.jpg" autoplay muted loop playsinline preload="metadata" aria-label="SINH playing to a packed room"></video>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="links" style="padding-top:0">
+  <div class="wrap">
+    <h2>Find SINH</h2>
+    <div class="socials">
+      <a href="https://soundcloud.com/officiallysinh"><small>SoundCloud</small><strong>@officiallysinh</strong></a>
+      <a href="https://www.instagram.com/officiallysinh/"><small>Instagram</small><strong>@officiallysinh</strong></a>
+      <a href="https://www.tiktok.com/@officiallysinh"><small>TikTok</small><strong>@officiallysinh</strong></a>
+      <a href="https://www.youtube.com/@officiallysinh"><small>YouTube</small><strong>@officiallysinh</strong></a>
+      <a href="https://linktr.ee/sinh"><small>All links</small><strong>linktr.ee/sinh</strong></a>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="booking">
+  <div class="wrap book">
+    <h2>Book <span>SINH</span></h2>
+    <a class="btn solid" href="https://tally.so/r/7XLXYz">Booking inquiry form</a>
+  </div>
+</section>
+
+<footer><span>SINH</span><span>Tucson, AZ and Chicago, IL</span></footer>
+</body>
+</html>
